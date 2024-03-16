@@ -1,0 +1,123 @@
+\documentclass{beamer}
+
+\usetheme{Darmstadt}
+
+\usepackage{graphics,xcolor}
+% \usepackage{stmaryrd,amssymb,amsmath}
+
+\usepackage{docmute}
+\usepackage{hyperref}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\intersection}{\ensuremath{\cap}}
+\newcommand{\emptyword}{\ensuremath{\epsilon}}
+\newcommand{\len}[1]{\ensuremath{|#1|}}
+\newcommand{\union}{\ensuremath{\cup}}
+\newcommand{\deltahat}{\ensuremath{\widehat{\delta}}}
+\title{2-way Deterministic Finite Automata}
+\author{Balaji,Sannidhi,Sasmita,Ramanan}
+\date{}
+\institute{IISc Bangalore}
+\begin{document}
+\maketitle
+\input{sample-slides.tex}
+\input{y.tex}
+\input{main.tex}
+\begin{frame}
+\frametitle{(Unary)2-DFA to 1-NFA/1-DFA - A worst case example}
+\begin{itemize}
+    \item Let $F(n)$ be defined as follows:
+    \item Maximum value of $lcm(x_1,x_2,\ldots x_k)$ such that $x_1+x_2+\ldots+x_k=n$ and $x_1,x_2,\ldots x_k \in \nat$
+\end{itemize}
+
+    Some properties of $F(n)$:
+    \begin{itemize}
+        \item $x_1,x_2,\ldots x_k$ can be found to be coprime satisfying $lcm(x_1,x_2\ldots x_k$)$ = F(n)$
+        \item $F(n) = O(H(n))$\\
+    \end{itemize}
+\end{frame}
+\begin{frame}   
+    \frametitle{(Unary)2-DFA to 1-NFA/1-DFA - A worst case example}
+    \begin{itemize}
+        \item Let the language $L = \{a^{iF(n)} \mid i \in \nat\ , i \ge 1\}$.
+        \item Take any 1-NFA accepting this language.
+        \item Any simple path from a start state to a final state must have length at least $F(n)$.
+        \item Canonical MN Relation has atleast $F(n)$ classes.
+        \item But 2-DFA can do better. Have $x_i$ states to check divisibility by $x_i$.
+        \item Upon seeing right end marker transition to new set of $x_{i+1}$ states if divisible by $x_i$. 
+        \item Reject if not divisible by any $x_i$. Go to final state if divisible by all $x_i$. Total number of states = $n+2$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{(Unary)2-DFA to 1-DFA - Best known Bound}
+    \begin{itemize}
+        \item Any unary 2-DFA with can be converted to 1-DFA with at most $O(H(n))$ states.
+        \item Any 2-DFA can be converted into an equivalent sweeping 2-DFA without changing the number of states. [Chrobak]
+        \item For accepting words of length $\le n$ accepted by the 2-DFA, we have n states, mark them as final accordingly
+        \item Note that any word of length longer than n accepted by the 2-DFA must pass through a cycle/pump.
+        \item Any given state can be a part of at most one of these cycles.
+        \item Say on a word u of length more than n the machine passes through at most k cycles.
+        
+    \end{itemize}
+
+\end{frame}
+\begin{frame}
+    \frametitle{(Unary)2-DFA to 1-DFA - Best known Bound}
+    \begin{itemize}
+        \item Let the lengths of the cycles be $y_1,y_2,\ldots y_k$. Then $y_1+y_2+\ldots y_k \le n$.
+        \item If a machine accepts a word u of length more than n, it must also accept a word of length $|u| + lcm(y_1,y_2,\ldots y_k)$.
+        \item Construct a 1-DFA with first n states as mentioned and a loop of length $lcm(y_1,y_2,\ldots y_k)$ attached to the last state. Mark states as final accordingly.
+        \item Prove: This accepts the same language as the 2-DFA.
+        \item The number of states in the 1-DFA is at most $n + lcm(y_1,y_2,\ldots y_k) \le n + F(n) = O(H(n))$.
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{Some other automata}
+    \begin{itemize}
+        \item \textbf{2 way Non-deterministic Finite Automata:-} A two-way nondeterministic finite automaton (2NFA) may have multiple transitions defined in the same configuration.
+        \item Its transition function is $\delta:(Q \times \Sigma\cup \{L,R\}) \rightarrow 2^{Q\times \{left,right\}}$
+        \item A 2NFA accepts a string if at least one of the possible computations is accepting. Like the 2DFAs, the 2NFAs also accept only regular languages. 
+        \item \textbf{Sweeping Automata:-} A two-way automaton performing head reversal only when the input head is visiting the endmarkers is
+        called sweeping automaton.
+        \item \textbf{Rotating Automata:-}A computation of a rotating automaton is a sequence of left-to-right scans of the input. In particular, when
+        the right end of the input is reached, the computation continues on the leftmost input symbol. 
+        
+        
+    \end{itemize}
+\end{frame}
+\begin{frame}
+    \frametitle{Some other automata}
+    \begin{itemize}
+        \item In other words, we can imagine the input tape as circular, with a special cell containing a marker and connecting
+        the end with the beginning of the tape.
+        \item With a trivial transformation which doubles the number of the
+        states, each rotating automaton can be transformed into an equivalent sweeping automaton.
+        \item \textbf{2 way Alternating Finite Automata(AFA):} Structure same as 2 way NFA. Transitions divided into 2: existential and universal.
+        \item Existential and universal transitions simulate all possible moves that can be made. Every state is given a truth value.
+        \item Even if there is one simulation that leads to a final state, existential transitions return 1. Universal transitions return 1 only if all simulations lead to a final state.
+        
+    \end{itemize}
+\end{frame}
+\begin{frame}
+    \frametitle{Other established results and open problems}
+    \begin{itemize}
+        \item Christos Kapoutsis determined that transforming an $n$-state 2-DFA to an equivalent 1-DFA requires $ {\displaystyle n(n^{n}-(n-1)^{n})}$ states in the worst case.
+        \item If an $n$-state 2DFA or a 2NFA is transformed to a 1-NFA, the worst-case number of states required is $ {2n \choose n+1}= O ( \frac{4 ^n}{ \sqrt{n}} ) $.
+        \item Sipser constructed a sequence of languages, each accepted by an n-state NFA, yet which is not accepted by any sweeping automata with fewer than $ {\displaystyle 2^{n}}$ states. 
+        \item \textbf{Sakoda-Sipser's open problem:-} Is there a 2-DFA with polynomial number of states accepting the same language as a 2-NFA?  
+        \item \textbf{Another open problem:} What is the relationship between unary 1-afa's (or 2-afa's) and other fa's? It
+        is easy to show some lower and upper bounds for 1-afa's with only universal states.
+    \end{itemize}
+\end{frame}
+\begin{frame}
+    \frametitle{References}
+    \begin{itemize}
+       \item Papers referenced are available on  \href{https://github.com/blackscreen-whitetext/Automata_Seminar}{\textcolor{blue}{Github}}
+       \item \href{https://en.wikipedia.org/wiki/Two-way_finite_automaton}{\textcolor{blue}{Wikipedia link}}
+    \end{itemize}
+\end{frame}
+\end{document}

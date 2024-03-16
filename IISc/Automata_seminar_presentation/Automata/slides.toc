@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Formal Definitions, Notations and Construction}{6}{0}{2}
+\beamer@sectionintoc {3}{Languages accepted by 2DFA}{14}{0}{3}
+\beamer@sectionintoc {4}{Established Results}{25}{0}{4}
