@@ -1,6 +1,6 @@
-PWD d:\balaji\Automata
+PWD c:\balaji\Certifications-Coursework\Course-certs\IISc\Automata_seminar_presentation\Automata
 INPUT C:\Users\balaj\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT d:\balaji\Automata\slides.tex
+INPUT c:\balaji\Certifications-Coursework\Course-certs\IISc\Automata_seminar_presentation\Automata\slides.tex
 OUTPUT slides.log
 INPUT C:\Users\balaj\AppData\Local\Programs\MiKTeX\tex\latex\beamer\beamer.cls
 INPUT C:\Users\balaj\AppData\Local\Programs\MiKTeX\tex\latex\beamer\beamer.cls

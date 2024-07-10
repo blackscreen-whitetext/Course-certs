@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1710562466 "d:/balaji/Automata/slides.tex" "slides.pdf" "slides" 1710562479 0
+["pdflatex"] 1717848094 "c:/balaji/Certifications-Coursework/Course-certs/IISc/Automata_seminar_presentation/Automata/slides.tex" "slides.pdf" "slides" 1717848102 0
   "C:/Users/balaj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1694942406 6165480 fb63296cc4885740f10ffe0c63b03140 ""
   "C:/Users/balaj/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1694942655 24933134 43d1fed5d9a7a3f1c4d4de094807d6ed ""
   "C:/Users/balaj/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -204,16 +204,16 @@
   "Screenshot 2024-03-13 at 3.50.28 PM.pdf" 1710523499 41357 a8b3bf73ac96b76d9a09103ed061ecfc ""
   "Screenshot 2024-03-15 at 3.05.42 PM.pdf" 1710523441 15375 b5969154a598fe6dea25a5c4e894cf1a ""
   "Screenshot 2024-03-15 at 6.08.48 PM copy.pdf" 1710523448 69507 ab57cb97d87e406db6136ead0a7d8110 ""
-  "d:/balaji/Automata/slides.tex" 1710534873 6819 8c03212dfc4635527ab3729eba4df620 ""
+  "c:/balaji/Certifications-Coursework/Course-certs/IISc/Automata_seminar_presentation/Automata/slides.tex" 1710534873 6819 8c03212dfc4635527ab3729eba4df620 ""
   "dfa4.pdf" 1710523499 41357 a8b3bf73ac96b76d9a09103ed061ecfc ""
   "dfa5.pdf" 1710523562 22886 14a8a3e66fd8e3fa75a35d6244da8f42 ""
   "main.tex" 1710534468 2793 7c23054697b506ea242d6a3c18cd2f07 ""
   "sample-slides.tex" 1710562431 10982 86de89e52433b686cf3daabd0d1db065 ""
-  "slides.aux" 1710562479 6856 3d87da07f08f8aafd4083b4669d96dde "pdflatex"
-  "slides.nav" 1710562479 4342 72a7b936893d9e90ea79bd5296a7b6aa "pdflatex"
-  "slides.out" 1710562479 711 26221cfb2021d9b0f0797c9f24869e46 "pdflatex"
+  "slides.aux" 1717848101 6856 3d87da07f08f8aafd4083b4669d96dde "pdflatex"
+  "slides.nav" 1717848101 4342 72a7b936893d9e90ea79bd5296a7b6aa "pdflatex"
+  "slides.out" 1717848101 711 26221cfb2021d9b0f0797c9f24869e46 "pdflatex"
   "slides.tex" 1710534873 6819 8c03212dfc4635527ab3729eba4df620 ""
-  "slides.toc" 1710562479 249 84f0a8cf28dbcdda41307aa51a3b0954 "pdflatex"
+  "slides.toc" 1717848101 249 84f0a8cf28dbcdda41307aa51a3b0954 "pdflatex"
   "x.jpg" 1710516766 37197 338e4b04364dc4eac6ed91e2c14c213a ""
   "y.tex" 1710525155 4229 c489781234903612c793c419efcb298b ""
   (generated)
